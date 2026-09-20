@@ -26,7 +26,7 @@ metadata:
     env: marvel
 spec:
   containers:
-  - image: nigelpoulton/k8sbook:shield-01
+  - image: crpi-gw6w9nvclnqq4rxd.cn-shanghai.personal.cr.aliyuncs.com/dev_rh/k8sbook:shield-01
     name: bus-ctr
     ports:
     - containerPort: 8080
