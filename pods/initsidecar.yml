@@ -8,13 +8,13 @@ spec:
   initContainers:
   - name: ctr-sync
     restartPolicy: Always
-    image: k8s.gcr.io/git-sync:v3.1.6
+    image: crpi-gw6w9nvclnqq4rxd.cn-shanghai.personal.cr.aliyuncs.com/dev_rh/git-sync:v3.1.6
     volumeMounts:
     - name: html
       mountPath: /tmp/git
     env:
     - name: GIT_SYNC_REPO
-      value: https://github.com/nigelpoulton/ps-sidecar.git
+      value: https://github.com/mingqian/ps-sidecar.git
     - name: GIT_SYNC_BRANCH
       value: master
     - name: GIT_SYNC_DEPTH
@@ -23,7 +23,7 @@ spec:
       value: "html"
   containers:
   - name: ctr-web
-    image: nginx
+    image: crpi-gw6w9nvclnqq4rxd.cn-shanghai.personal.cr.aliyuncs.com/dev_rh/nginx:latest
     volumeMounts:
     - name: html
       mountPath: /usr/share/nginx/
